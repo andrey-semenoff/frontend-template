@@ -1,0 +1,110 @@
+/**
+* ----- Mixins -----
+*/
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin inline-block ($valine: middle) {
+  display: inline-block;
+  vertical-align: $valine;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@mixin center-translate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+@mixin placecolor($color: #000000) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+
+/* ---------- font-face ---------- */
+
+@mixin font-face($font-family, $file-path, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.ttf') format('truetype'),
+    url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+/* ---------- media query ---------- */
+
+@mixin desktop() {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone() {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media($size, $dim:'max-width') {
+  @media screen and ($dim: $size + px) {
+    @content;
+  }
+}
+
+/* ---------- png sprites ---------- */
+
+// @each $sprite in $social-sprites {
+// 	.socials__item_#{nth($sprite, 10)} {
+// 		.socials__icon {
+// 			@include sprite($sprite)
+// 		}
+// 	}
+// }

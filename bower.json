@@ -1,0 +1,21 @@
+{
+  "name": "project-builder",
+  "authors": [
+    "Andrey Semenov <andrey.semenoff@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "normalize-css": "^4.1.1"
+  }
+}

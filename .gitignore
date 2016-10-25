@@ -1,0 +1,81 @@
+# Dependency directory #
+########################
+node_modules
+bower_components
+
+# Production files #
+###############
+_build
+.CVS
+.hg
+.svn
+dist
+build
+npm-debug.log
+
+# SASS files #
+##############
+.sass-cache
+
+# PHP Storm files #
+###################
+.idea
+
+# OS generated files #
+######################
+._*
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+.AppleDB
+.AppleDesktop
+.apdisk
+ehthumbs.db
+Network Trash Folder
+Temporary Items
+Thumbs.db
+*.sublime-grunt.cache
+*.sublime-project
+*.sublime-workspace
+.cache
+.project
+.settings
+.tmproj
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.bak
+*.diff
+*.err
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*~
