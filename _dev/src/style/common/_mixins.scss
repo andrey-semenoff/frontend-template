@@ -54,7 +54,8 @@
 
 /* ---------- font-face ---------- */
 
-@mixin font-face($font-family, $file-path, $font-weight: normal, $font-style: normal) {
+@mixin font-face($font-family, $folder, $font-weight: normal, $font-style: normal) {
+  $file-path: $folder + '/' + $font-family + '/' + $font-family;
   @font-face {
     font-family: $font-family;
     src: url('#{$file-path}.eot');
