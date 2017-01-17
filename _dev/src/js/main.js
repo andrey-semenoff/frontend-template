@@ -3,7 +3,7 @@
 $(function () {
 
   // Инициализация скрипта
-  Test_Module.init();
+  Smooth_Scroll.init();
   
 });
 

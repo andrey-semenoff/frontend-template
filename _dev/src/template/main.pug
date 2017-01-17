@@ -3,14 +3,17 @@ html(lang="ru-RU")
 	head
 		include section/_head
 	body
-		div(style="display: none")
+		//- | Блок для svg-спрайта
+		//- div(style="display: none")
 			include common/_spriteIcons.svg
 
 		include common/mixins
-		
-		.wrapper
-			include section/header
 
-			block content
+		//- | блок .wrapper нужен для sticky-footer
+		//- .wrapper
+
+		include section/header
+
+		block content
 
 		include section/footer

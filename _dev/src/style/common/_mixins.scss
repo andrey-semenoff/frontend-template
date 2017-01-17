@@ -13,12 +13,21 @@
   }
 }
 
-@mixin inline-block ($valine: middle) {
+@mixin v-align-child ($valine: middle) {
   display: inline-block;
   vertical-align: $valine;
 }
 
-@mixin absolute-center {
+@mixin v-align-parent ($valine: middle) {
+  &:after {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: $valine;
+  }
+}
+
+@mixin center-absolute {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,7 +42,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 
 @mixin placecolor($color: #000000) {
@@ -103,9 +111,9 @@
 /* ---------- png sprites ---------- */
 
 // @each $sprite in $social-sprites {
-// 	.socials__item_#{nth($sprite, 10)} {
-// 		.socials__icon {
-// 			@include sprite($sprite)
-// 		}
-// 	}
+//  .socials__item_#{nth($sprite, 10)} {
+//    .socials__icon {
+//      @include sprite($sprite)
+//    }
+//  }
 // }

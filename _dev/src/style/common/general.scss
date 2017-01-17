@@ -3,6 +3,7 @@
 * ============================== */
 
 @include font-face('RobotoRegular', '../fonts');
+@include font-face('FontAwesome', '../fonts');
 
 $container-width: 1026px;
 $body-font: 'RobotoRegular', Helvetica, sans-serif;
@@ -58,15 +59,15 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 
-.container {
+._container {
   max-width: $container-width;
   margin: 0 auto;
+  // overflow: hidden;
 }
 
-.row {
+._row {
   @include clearfix();  
 }
-
 
 .wrapper {
   position: relative;
