@@ -62,13 +62,13 @@ module.exports = {
                 src:[
                       './bower_components/jquery/dist/jquery.min.js'
                     ],
-                dest: './_build/js/'
+                dest: './_build/vendor/js/'
               },
     vendorCSS: {
                 src:[
                       './bower_components/normalize-css/normalize.css'
                     ],
-                dest: './_build/css/'
+                dest: './_build/vendor/css/'
               },
     copyToRoot: {
                 src: './_dev/src/copyToRoot/**/*.*',

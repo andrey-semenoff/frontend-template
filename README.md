@@ -1,2 +1,2 @@
-# frontend-template
-My frontend template using gulp, pug, sass
+# Project
+Developed using gulp, pug, sass

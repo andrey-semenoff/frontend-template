@@ -21,13 +21,20 @@ meta(http-equiv='x-ua-compatible' content='ie=edge')
 //- meta(name="twitter:image" content="http://.../banner_og.jpg")
 // End of Social Graph Protocol Meta Data 
 
+// Favicons
 link(rel="icon" type="image/png" href="img/favicon/favicon16x16.png" sizes="16x16")
 link(rel="icon" type="image/png" href="img/favicon/favicon32x32.png" sizes="32x32")
 link(rel="icon" type="image/png" href="img/favicon/favicon96x96.png" sizes="96x96")
-link(rel='stylesheet' href='css/vendor.css')
-link(rel='stylesheet' href='css/main.css')
-script(src='js/vendor.js' defer)
-script(src='js/main.js' defer)
+
+// Styles
+link(rel="stylesheet" href="css/vendor/normalize.css")
+link(rel="stylesheet" href="css/main.css")
+
+// Scripts defer
+script(src="js/vendor/jquery.min.js" defer)
+script(src="js/main.js" defer)
+
+// html5shiv
 <!--[if lt IE 9]>
 script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 <![endif]-->
