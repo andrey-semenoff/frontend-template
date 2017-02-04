@@ -60,15 +60,18 @@ module.exports = {
             },
     vendorJS: {
                 src:[
-                      './bower_components/jquery/dist/jquery.min.js'
+                      './bower_components/jquery/dist/jquery.min.js',
+                      './bower_components/owl.carousel/dist/owl.carousel.min.js'
                     ],
-                dest: './_build/vendor/js/'
+                dest: './_build/js/vendor/'
               },
     vendorCSS: {
                 src:[
-                      './bower_components/normalize-css/normalize.css'
+                      './bower_components/normalize-css/normalize.css',
+                      './bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
+                      './bower_components/font-awesome/css/font-awesome.min.css',
                     ],
-                dest: './_build/vendor/css/'
+                dest: './_build/css/vendor/'
               },
     copyToRoot: {
                 src: './_dev/src/copyToRoot/**/*.*',

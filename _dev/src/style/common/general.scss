@@ -1,9 +1,7 @@
-/*! ============================
-* ----- General styles ---------
-* ============================== */
+/*! ===== General styles ===== */
 
-@include font-face('RobotoRegular', '../fonts');
 @include font-face('FontAwesome', '../fonts');
+@include font-face('RobotoRegular', '../fonts');
 
 $container-width: 1026px;
 $body-font: 'RobotoRegular', Helvetica, sans-serif;
@@ -18,14 +16,14 @@ $body-color: #fff;
 }
 
 html {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   font-size: 16px;
 }
 
 body {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   font-family: $body-font;
   font-size: 100%;
   background-color: $body-color;
@@ -69,19 +67,80 @@ h1, h2, h3, h4, h5, h6, p {
   @include clearfix();  
 }
 
-.wrapper {
-  position: relative;
-  max-width: 1800px;
-  min-height: 100%;
+// .wrapper {
+//   position: relative;
+//   max-width: 1800px;
+//   min-height: 100%;
+//   margin: 0 auto;
+//   overflow: hidden;
+//   margin-bottom: - $footer-height;
+
+
+//   &:after {
+//     content: '';
+//     display: block;
+//     height: $footer-height;
+//   }
+// }
+
+
+
+/*! --- owl-carousel --- */
+
+.owl-carousel {
+  max-width: 925px;
+  width: 85%;
   margin: 0 auto;
-  overflow: hidden;
-  margin-bottom: - $footer-height;
+  margin-top: 65px;
 
-
-  &:after {
-    content: '';
-    display: block;
-    height: $footer-height;
+  @include media(500) {
+    width: 80%;
   }
+}
+
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-prev {
+  left: -5%;
+
+  @include media(500) {
+    left: -9%;
+  }
+}
+
+.owl-next {
+  right: -5%;
+
+  @include media(500) {
+    right: -9%;
+  }
+}
+
+.owl-next .owl-nav_arrow {
+  // transform: rotate(180deg);
+}
+
+.owl-nav_arrow {
+  // width: 28px;
+  // height: 46px;
+}
+
+/*! --- google-map --- */
+
+.google-map {
+  position: relative;
+}
+
+.google-map__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
