@@ -108,6 +108,17 @@
   }
 }
 
+// Add auto all icons from sprite by variable
+@mixin icons($sprites) {
+  @each $sprite in $sprites {
+    .icon-#{nth($sprite, 10)} ) {
+      @include sprite-width($sprite);
+      @include sprite-height($sprite);
+      @include sprite-position($sprite); 
+    }
+  }
+}
+
 /* ---------- png sprites ---------- */
 
 // @each $sprite in $social-sprites {

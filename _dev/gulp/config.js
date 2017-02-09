@@ -12,10 +12,7 @@ module.exports = {
                                 cssName: '_spriteIcons.scss',
                                 cssFormat: 'scss',
                                 cssSpritesheetName: 'icons',
-                                padding: 5,
-                                cssVarMap: function (sprite) {
-                                  sprite.name = 'icon-' + sprite.name;
-                                }
+                                padding: 5
                               },
                     src: './_dev/src/img/icons/**/*.png',
                     imgDest: './_dev/src/img/',

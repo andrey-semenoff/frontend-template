@@ -4,8 +4,9 @@
 @include font-face('RobotoRegular', '../fonts');
 
 $container-width: 1026px;
-$body-font: 'RobotoRegular', Helvetica, sans-serif;
 $body-color: #fff;
+$body-font: 'RobotoRegular', Helvetica, sans-serif;
+$body-font-color: #000;
 
 *, *:before, *:after {
   margin: 0;
@@ -26,15 +27,22 @@ body {
   // height: 100%;
   font-family: $body-font;
   font-size: 100%;
+  color: $body-font-color;
   background-color: $body-color;
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*! --- Preload images --- */
+// body:before {
+//   content: '';
+//   background:
+//     url(../img/clients/kaspersky_color.jpg),
+// }
+
 a, a:hover, a:focus {
   text-decoration: none;
-  color: inherit;
   cursor: pointer;
 }
 
@@ -60,12 +68,39 @@ h1, h2, h3, h4, h5, h6, p {
 ._container {
   max-width: $container-width;
   margin: 0 auto;
-  // overflow: hidden;
 }
 
 ._row {
   @include clearfix();  
 }
+
+
+/*! --- icons --- */
+.icon {
+  display: inline-block;
+  background-image: url(../img/spriteIcons.png);
+  vertical-align: middle;
+}
+
+@include icons($icons-sprites);
+/*! --- END icons --- */
+
+
+/*! --- standart buttons --- */
+.button {
+  display: inline-block;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/*! --- standart title --- */
+.title {
+
+}
+
 
 // .wrapper {
 //   position: relative;
