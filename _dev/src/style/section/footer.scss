@@ -6,3 +6,35 @@ footer.footer {
 	
 	background-color: #ccc;
 }
+
+.alert {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: all 0.5s;
+	animation: alert_show 0.5s;
+	
+	&__msg {
+		float: left;
+	}
+
+	&_show {
+		display: block;
+	}
+
+	&_hide {
+		animation: alert_hide 1s;
+	}
+}
+
+@keyframes alert_show {
+	0% { top: -100px; }
+	100% { top: 0; }
+}
+
+@keyframes alert_hide {
+	0% { top: 0; }
+	100% { top: -100px; }
+}

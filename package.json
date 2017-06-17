@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "project template",
   "version": "1.0.0",
   "description": "## Installation: 1. git clone 2. git npm i 3. git bower i 4. gulp",
   "main": "gulpfile.js",
@@ -31,14 +31,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrey-semenoff/portfolio-loftschool.git"
+    "url": "git+https://github.com/andrey-semenoff/frontend-template.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andrey-semenoff/portfolio-loftschool/issues"
+    "url": "https://github.com/andrey-semenoff/frontend-template/issues"
   },
-  "homepage": "https://github.com/andrey-semenoff/portfolio-loftschool#readme",
+  "homepage": "https://github.com/andrey-semenoff/frontend-template#readme",
   "optionalDependencies": {}
 }

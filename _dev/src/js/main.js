@@ -5,6 +5,17 @@ $(function () {
   // Инициализация скрипта
   Smooth_Scroll.init();
   
+  // Инициализация функции валидации форм
+  var validate = Validate_Forms.init();
+  
+  // Инициализация скрипта для формы регистрации
+  Form_Send_Ajax.init({
+    forms: [
+      '.form'
+    ],
+    validate: validate
+  });
+
   // owl-carousel init
   $(".owl-carousel[data-type='common']").owlCarousel({
   	items: 4,
@@ -35,5 +46,3 @@ $(function () {
   	}
   });
 });
-
-
