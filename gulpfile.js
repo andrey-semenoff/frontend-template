@@ -19,8 +19,9 @@ $.gulp.task('default', $.gulp.series(
     'spriteSVG',
     $.gulp.parallel(
         'mainJS',
-        'vendorJS',
-        'vendorCSS',
+        'vendor',
+        // 'vendorJS',
+        // 'vendorCSS',
         'fonts'
     ),
     'pug',

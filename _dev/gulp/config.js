@@ -55,21 +55,28 @@ module.exports = {
               src: ['./_dev/src/fonts/**/*.*', '!_dev/src/fonts/**/*.md'],
               dest: './_build/fonts/'
             },
-    vendorJS: {
+    vendor: {
                 src:[
-                      './bower_components/jquery/dist/jquery.min.js',
-                      './bower_components/owl.carousel/dist/owl.carousel.min.js'
+                      './bower_components/**/*.*'
                     ],
-                dest: './_build/js/vendor/'
+                dest: './_build/vendor/'
               },
-    vendorCSS: {
-                src:[
-                      './bower_components/normalize-css/normalize.css',
-                      './bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
-                      './bower_components/font-awesome/css/font-awesome.min.css',
-                    ],
-                dest: './_build/css/vendor/'
-              },
+
+    // vendorJS: {
+    //             src:[
+    //                   './bower_components/jquery/dist/jquery.min.js',
+    //                   './bower_components/owl.carousel/dist/owl.carousel.min.js'
+    //                 ],
+    //             dest: './_build/js/vendor/'
+    //           },
+    // vendorCSS: {
+    //             src:[
+    //                   './bower_components/normalize-css/normalize.css',
+    //                   './bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
+    //                   './bower_components/font-awesome/css/font-awesome.min.css',
+    //                 ],
+    //             dest: './_build/css/vendor/'
+    //           },
     copyToRoot: {
                 src: './_dev/src/copyToRoot/**/*.*',
                 dest: './_build/'
@@ -82,8 +89,7 @@ module.exports = {
     './_dev/gulp/tasks/style.js',
     './_dev/gulp/tasks/pug.js',
     './_dev/gulp/tasks/mainJS.js',
-    './_dev/gulp/tasks/vendorJS.js',
-    './_dev/gulp/tasks/vendorCSS.js',
+    './_dev/gulp/tasks/vendor.js',
     './_dev/gulp/tasks/images.js',
     './_dev/gulp/tasks/fonts.js',
     './_dev/gulp/tasks/copyToRoot.js',
