@@ -36,13 +36,13 @@ var Form_Send_Ajax = (function() {
       // if( true ) {
       if( validate($form) ) {
           var formData = $form.serialize();
-          
+
         $.ajax({
           method: "POST",
           url: "mail.php",
           data: formData
         })
-        .done(function( res ) {
+        .done(function( res ) {      
           var data = JSON.parse(res),
               status = data.status,
               msg = data.msg,
@@ -55,8 +55,12 @@ var Form_Send_Ajax = (function() {
             alert_class = 'danger';
           }
 
-          $form.append( $alert.addClass('alert_show alert-'+ alert_class).children('.alert__msg').html(msg).parent() );
-          
+          $alert.addClass('alert_show alert-'+ alert_class).children('.alert__msg').html(msg);
+
+          $form.append( $alert )
+                .addClass('order__form_sending')
+                .children('.order__button').prop('disabled', true);
+
           $(document).on('click', ".alert", function(){
             removeAlert();
             clearTimeout(timer);
@@ -68,9 +72,11 @@ var Form_Send_Ajax = (function() {
 
           function removeAlert() {
             $form[0].reset();
+            $form.removeClass('order__form_sending')
+                  .children('.order__button').prop('disabled', false);
             $(".alert.alert-"+ alert_class).addClass("alert_hide").fadeOut("slow", function() {
               $(".alert.alert-"+ alert_class).remove();
-              // $.modal.close();
+              $.modal.close();
             });
           }
 
@@ -93,7 +99,6 @@ var Form_Send_Ajax = (function() {
             $form[0].reset();
             $(".alert.alert-danger").addClass("alert_hide").fadeOut("slow", function() {
               $(".alert.alert-danger").remove();
-              // $.modal.close();
             });
           }
 

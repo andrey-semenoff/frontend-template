@@ -45,4 +45,24 @@ $(function () {
       }
   	}
   });
+
+
+  // modal
+  $("[data-modal]").click(function(e) {
+    e.preventDefault();
+    var $modal = $($(this).attr('href'));
+
+    $modal.on($.modal.BLOCK, function(e) {
+      $('.error-note').remove();
+    })
+    .on($.modal.OPEN, function(e) {
+      $modal.find('input:nth-of-type(1)').focus();
+    });
+
+    $modal.modal({
+      fadeDuration: 500
+    });
+  })
+
+  //  
 });
